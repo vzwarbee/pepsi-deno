@@ -1,0 +1,734 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: Sofia Pro Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+:root {
+    --main-color: #c2754e;
+    --bg-color: #0065C3;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+::-webkit-scrollbar-thumb {
+    background: #00BFFF;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(61, 157, 231);
+}
+
+::-webkit-scrollbar-track {
+    background: #1877F2;
+}
+body {
+    background: #0065C3;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    /* background: #0065C3; */
+    padding: 1rem 7%;
+    /* border-bottom: 1px solid black; */
+    transition: 0.25s;
+    
+}
+nav {
+    justify-content: space-between;
+}
+
+header.sticky {
+    box-shadow: 0 0 10px black;
+    padding: 0.5rem 7%;
+    background: #0065C3;
+    /* color: #ffff; */
+}
+
+header .container-fluid {
+    justify-content: space-between;
+}
+
+.header-nav ul{
+    display: flex;
+
+}
+
+header .form-control {
+    background: transparent;
+    transition: 0.5s;
+}
+
+header.sticky .form-control {
+    background: #ffff;
+}
+
+.navbar-collapse {
+    flex-grow: 0.5 !important;
+}
+
+header.sticky .collapse ul li a,
+header .collapse ul li a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+
+header .collapse ul .dropdown-menu .dropdown-item{
+    color: black;
+}
+
+.header-nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    text-transform: uppercase;
+    
+}
+
+.header-nav ul li a {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: 0.25s linear;
+}
+.header-nav ul li a:hover {
+    color: var(--main-color);
+}
+
+header button{
+    padding: 5px 30px;
+    background: transparent;
+    outline: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: 0.25s linear;
+}
+
+.header-register button:hover {
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+header.sticky .header-register button {
+    padding: 3px 15px;
+    font-size: 15px;
+}
+
+.body-page1 {
+
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #0065C3, black);
+}
+
+.body-page1 .body-page1-image video {
+    width: 100%;
+}
+
+.body-page1 .body-page1-title {
+    text-align: center;
+    padding: 70px 0 0 0;
+    line-height: 1;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+
+
+.body-page1 .body-page1-title h3 {
+    font-size: 30px;
+    color: white;
+}
+
+.body-page1 .body-page1-title h1 {
+    font-size: 95px;
+    color: #a65d37;
+}
+
+.body-page1 .body-page1-title h2 {
+    font-size: 40px;
+    color: #c2754e;
+}
+
+.body-page2 {
+    min-height: 75vh;
+    position: relative;
+    height: 100%;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;  
+    padding-top: 40px;   
+}
+
+.body-page2 .swiper {
+    width: 800px;
+    /* padding-top: 50px;
+    padding-bottom: 100px; */
+  }
+
+.body-page2 .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+}
+
+.body-page2 .swiper-slide img {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 100%;
+  }
+
+
+
+footer {
+    padding: 0.7rem 7%;
+    background: black;
+    justify-content: space-between;
+    color: white;
+}
+
+footer .footer-logo {
+    display: flex;
+    height: 100px;
+}
+
+footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+
+footer .footer-contact {
+    font-size: 20px;
+}
+
+footer .footer-contact button {
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    color: white;
+    background: #0065C3;
+    cursor: pointer;
+}
+
+footer .footer-contact button:hover {
+    color: #c2754e;
+    transition: 0.25s;
+}
+
+
+footer .footer-contact .footer-contact-icon {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+footer .footer-contact .footer-contact-icon a{
+    font-size: 30px;
+    color: white;
+    transition: 0.25s;
+}
+
+footer .footer-contact .footer-contact-icon a:nth-child(1):hover {
+    color: #1d9bf0;
+}
+footer .footer-contact .footer-contact-icon a:nth-child(2):hover {
+    color: #FE28A2;
+}
+footer .footer-contact .footer-contact-icon a:nth-child(3):hover {
+    color: #FF0000;
+}
+footer .footer-contact .footer-contact-icon a:nth-child(4):hover {
+    color: #4867aa;
+}
+footer .footer-contact .footer-contact-icon a:nth-child(5):hover {
+    color: #000000;
+}
+
+footer .footer-contact .footer-contact-icon a:nth-child(5) {
+    text-shadow: 2px 2px 10px white;
+
+}
+
+.body-page3 {
+    width: 100%;
+    min-height: 35rem;
+    display: flex;
+    align-items: center;
+    /* padding: 20px; */
+    color: white;
+    background: url(../image/PZS-tile-background.png);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    
+}
+
+.body-page3 .body-page3-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 100px;
+    width: 70%;
+    height: 70%;
+}
+
+
+.body-page3 .body-page3-container .body-page3-container-left {
+    width: 700px;
+}
+
+.body-page3 .body-page3-container .body-page3-container-left img {
+    width: 700px;
+    height: 200px;
+}
+
+.body-page3 .body-page3-container video {
+    width: 600px;
+    height: 300px;
+}
+
+.body-page3 .body-page3-container .body-page3-container-right  img{
+    width: 250px;
+    height: 500px;
+}
+
+
+.footer-bottom h4{
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.footer-bottom span {
+    color: var(--bg-color);
+}
+
+.body-page4 {
+    height: 100vh;
+}
+
+.body-page4 .body-page4-video {
+    width: 100%;
+}
+
+.body-page4 .body-page4-video video {
+    width: 100%;
+    object-fit: cover;
+}
+
+.body-page5 {
+    width: 100%;
+    min-height: 33rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+}
+
+.body-page5-container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    gap: 0 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body-page5-container .body-page5-container-left {
+    width: 47.5%;
+    height: auto;
+    flex-direction: column;
+}
+
+.body-page5-container .body-page5-container-left h1 {
+    font-size: 2.5rem;
+    line-height: 1em;
+    font-weight: 600;
+    width: 100%;
+}
+
+.body-page5-container .body-page5-container-left .promotion__title__line {
+    display: block;
+}
+
+.body-page5-container .body-page5-container-left p {
+    width: 70%;
+    margin: 1em 0;
+    line-height: 1.25;
+    font-size: .85em;
+    color: #ffff;
+}
+
+.body-page5-container .body-page5-container-left button {
+    font-size: .875rem;
+    line-height: 1.25;
+    display: inline-block;
+    font-size: 1em;
+    height: 2.3em;
+    padding: 0.4em 1.85em;
+    border: 2px solid #fff;
+    border-radius: 1.8em;
+    background: transparent;
+    color: #fff;
+    font-family: Sofia Pro Black,Helvetica Neue,Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.25s linear;
+}
+
+.body-page5-container .body-page5-container-left button:hover {
+    background: #ffff;
+    color: #0065C3;
+}
+
+.body-page5-container-right {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+}
+
+.body-page5-container-right::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    background: #333;
+    width: 95%;
+    filter: blur(20px);
+    height: 105%;
+    z-index: 0;
+}
+
+.body-page5-container-right .body-page5-container-right-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+}
+
+.body-page5-container-right .body-page5-container-right-list .body-page5-container-right-list-item {
+    padding: 10px 20px 0 20px;
+    width: 25%;
+    height: 150px;
+    margin-top: -50px;
+    overflow: hidden;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.body-page5-container-right .body-page5-container-right-list .body-page5-container-right-list-item img {
+    width: 100%;
+    height: 200px;
+    
+}
+
+@media only screen and (max-width: 530px) {
+    .body-page1 {
+        height: 20vh !important;
+
+    }
+    footer .footer-logo img:nth-child(2) {
+        display: none;
+    }
+
+    .body-page3 .body-page3-container .body-page3-container-left img {
+        width: 400px;
+        height: 150px;
+    }
+    
+    .body-page3 .body-page3-container video {
+        width: 400px;
+        height: 250px;
+    }
+
+    .body-page5-container .body-page5-container-left h1 {
+        font-size: 1.5rem;
+        line-height: 1em;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .body-page5-container .body-page5-container-left p {
+        width: 70%;
+        margin: 1em 0;
+        line-height: 1.25;
+        font-size: .75em;
+        color: #ffff;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .body-page3 .body-page3-container .body-page3-container-right img {
+        display: none;
+    }
+
+    .body-page4 {
+        height: 55vh;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .body-page4 {
+        height: 45vh;
+    }
+    .body-page1 {
+        height: 60vh !important;
+    }
+    
+}
+
+
+@media screen and (max-width: 750px){
+
+    .body-page5-container .body-page5-container-left {
+        width: 70%;
+    }
+
+    .body-page5-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .body-page5-container-right .body-page5-container-right-list .body-page5-container-right-list-item img {
+        width: 100%;
+        height: 200px;
+        display: none;
+        
+    } */
+
+    .body-page5-container-right {
+        display: none;
+    }
+
+
+
+    .body-page1 {
+        height: 50vh !important;
+    }
+    body {
+        width: 100%;
+    }
+
+    .body-page2 {
+        height: 80vh;
+    }
+
+    .body-page3 {
+        min-height: 60vh;
+        width: 100%;
+    }
+
+    .body-page3 img {
+        height: 350px;
+        width: 350px;
+    }
+
+    .body-page3-title {
+        width: 100%;
+        line-height: 1;
+    }
+
+    .body-page3-title h1 {
+        margin-top: 10px;
+        text-align: center;
+        display: block;
+        padding-bottom: 5px;
+        border-bottom: #000000 1px solid;
+    }
+    .body-page3-title p {
+        font-weight: 500;
+        margin-top: 20px;
+        text-align: right;
+        font-size: 15px;
+    }
+
+    .post-desc {
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 20;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    footer .footer-contact .footer-contact-icon a{
+        font-size: 20px;
+        color: white;
+        transition: 0.25s;
+    }
+    
+    footer .footer-top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+    }
+
+    footer .footer-logo {
+        margin-top: 10px;
+    }
+    footer .footer-logo img:nth-child(1){
+        width: 70px;
+        height: 70px;
+
+    }
+    footer .footer-logo img:nth-child(2) {
+        width: 150px;
+        height: 50px;
+    }
+
+    
+    footer .footer-contact button {
+        padding: 5px 20px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        color: white;
+        background: #0065C3;
+        cursor: pointer;
+    }
+    
+    footer .footer-contact button:hover {
+        color: #c2754e;
+        transition: 0.25s;
+    }
+    
+    
+    footer .footer-contact .footer-contact-icon {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    footer .footer-bottom h4{
+        font-size: 15px;
+    }
+
+    .body-page2 .swiper {
+        width: 500px;
+        /* padding-top: 50px;
+        padding-bottom: 100px; */
+      }
+    
+    .body-page2 .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 300px;
+    }
+    
+    .body-page2 .swiper-slide img {
+        margin: 0 auto;
+        display: block;
+        width: 160px;
+        height: 100%;
+      }
+
+      .body-page2 {
+        min-height: 75vh;
+        position: relative;
+        height: 100%;
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;  
+        padding-top: 20px;   
+    }
+
+    .body-page3 .body-page3-container .body-page3-container-right img {
+        display: none;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    footer {
+        padding: 0.7rem 7%;
+        background: black;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .footer-logo img:nth-child(2){
+        display: none;
+    }
+    
+    footer .footer-top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid white;
+    }
+    
+    footer .footer-contact {
+        font-size: 20px;
+    }
+    
+    footer .footer-contact button {
+        padding: 5px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        color: white;
+        background: #0065C3;
+        cursor: pointer;
+    }
+    
+    footer .footer-contact button:hover {
+        color: #c2754e;
+        transition: 0.25s;
+    }
+    
+    
+    footer .footer-contact .footer-contact-icon {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    footer .footer-contact .footer-contact-icon a{
+        font-size: 20px;
+        color: white;
+        transition: 0.25s;
+    }
+}

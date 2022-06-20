@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+header .collapse ul li a{
+  text-shadow: 0 0 3px #333;
+}
+
+section {
+  margin-top: 110px;
+  padding: 20px;
+}
+
+section ul {
+  display: flex;
+}
+
+section ul li {
+  list-style: none;
+  margin-right: 10px;
+  padding: 5px 20px;
+  background: #eee;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+section ul li.active {
+  background: #03a9f4;
+  color: white;
+}
+
+.box-content {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.box-content .itemBox {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border-radius: 15px;
+  background: rgba(30, 68, 240, 0.30);
+  padding: 5px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: 0.25s linear;
+}
+
+.box-content .itemBox:hover,
+.box-content .itemBox:hover p {
+  background: transparent;
+  text-shadow: 0 4px 3px rgba(0, 0, 0, 0.75);
+}
+
+.box-content .itemBox p {
+  font-weight: 500;
+  transition: 0.5s;
+}
+.box-content .itemBox img {
+  border-radius: 15px;
+  margin-bottom: 15px;
+  height: 200px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1030px) {
+  .box-content .itemBox {
+    margin: 20px auto;
+  }
+}
+
+
+/* @media only screen and (max-width: 650px) {
+  .box-content .itemBox {
+    margin: 20px auto;
+  }
+} */
